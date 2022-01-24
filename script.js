@@ -2,9 +2,9 @@
 const Rock = 100 / 3;
 const Paper = Rock * 2;
 const Scissors = Rock * 3
-console.log(Rock);
-console.log(Paper);
-console.log(Scissors);
+    // console.log(Rock);
+    // console.log(Paper);
+    // console.log(Scissors);
 
 function computeurPlay() {
     // Génération de la variable du choix de l'ordinateur pour le tour 
@@ -18,5 +18,7 @@ function computeurPlay() {
         console.log("Scissors");
     }
 }
+Function round(playerSelection, computeurSelection) {
 
+}
 computeurPlay();
