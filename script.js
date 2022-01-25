@@ -20,10 +20,10 @@ function computerPlay() {
 }
 
 // définition du choix de l'utilisateur et de celui de l'ordinateur.
-// const playerSelection = prompt("Rock, paper or scissors ?").toLowerCase();
-const playerSelection = "paper";
-// const computeurSelection = computerPlay();
-const computeurSelection = "paper";
+const playerSelection = prompt("Rock, paper or scissors ?").toLowerCase();
+// const playerSelection = "paper";
+const computeurSelection = computerPlay();
+// const computeurSelection = "paper";
 
 console.log(`player choice is ${playerSelection}, computer choice is ${computeurSelection}`);
 
@@ -44,4 +44,9 @@ function playRound(playerSelection, computeurSelection) {
         return `${playerSelection} vs ${computeurSelection}, Draw`
     }
 }
-console.log(playRound(playerSelection, computeurSelection));
+// console.log(playRound(playerSelection, computeurSelection));
+function game(nb) {
+    for (let i=0; i<nb; i++) {
+        playRound(playerSelection, computeurSelection)
+    }
+}
