@@ -9,7 +9,7 @@ const scissors = rock * 3
 function computerPlay() {
     // Génération de la variable du choix de l'ordinateur pour le tour 
     let i = Math.random() * 100;
-    console.log(`valeur de i ${i}`);
+    console.log(`valeur de i = ${i}`);
     if (i <= rock) {
         return "rock";
     } else if (i <= paper) {
@@ -20,27 +20,28 @@ function computerPlay() {
 }
 
 // définition du choix de l'utilisateur et de celui de l'ordinateur.
-const playerSelection = prompt("Rock, paper or scissors ?").toLowerCase();
-// const playerSelection = "rock";
-const computeurSelection = computerPlay();
+// const playerSelection = prompt("Rock, paper or scissors ?").toLowerCase();
+const playerSelection = "paper";
+// const computeurSelection = computerPlay();
+const computeurSelection = "paper";
 
 console.log(`player choice is ${playerSelection}, computer choice is ${computeurSelection}`);
 
-function playround(playerSelection, computeurSelection) {
+function playRound(playerSelection, computeurSelection) {
     if ((computeurSelection === "rock") && (playerSelection === "paper")) {
-        return `You win, ${playerSelection} beat ${computeurSelection}`
+        return `You win, ${playerSelection} beat ${computeurSelection}`;
     } else if ((computeurSelection === "rock") && (playerSelection === "scissors")) {
-        return `You loose, ${playerSelection} is beaten by ${computeurSelection}`
+        return `You loose, ${playerSelection} is beaten by ${computeurSelection}`;
     } else if ((computeurSelection === "paper") && (playerSelection === "scissors")) {
-        return `You win, ${playerSelection} beat ${computeurSelection}`
+        return `You win, ${playerSelection} beat ${computeurSelection}`;
     } else if ((computeurSelection === "paper") && (playerSelection === "rock")) {
-        return `You loose, ${playerSelection} is beaten by ${computeurSelection}` 
-    } else if ((computeurSelection === "scissors ") && (playerSelection === "paper")) {
-        return `You loose, ${playerSelection} is beaten by ${computeurSelection}`      
+        return `You loose, ${playerSelection} is beaten by ${computeurSelection}` ;
+    } else if ((computeurSelection === "scissors") && (playerSelection === "paper")) {
+        return `You loose, ${playerSelection} is beaten by ${computeurSelection}` ;   
     } else if ((computeurSelection === "scissors") && (playerSelection === "rock")) {
-        return `You win, ${playerSelection} beat ${computeurSelection}`
+        return `You win, ${playerSelection} beat ${computeurSelection}`;
     } else {
         return `${playerSelection} vs ${computeurSelection}, Draw`
     }
 }
-console.log(playround(playerSelection, computeurSelection));
+console.log(playRound(playerSelection, computeurSelection));
