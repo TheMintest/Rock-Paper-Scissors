@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor test </title>
+</head>
+
+<body>
+    <script>
+        const rock = 100 / 3;
+        const paper = rock * 2;
+        const scissors = rock * 3
+
+        function computerChoice() {
+            // Génération de la variable du choix de l'ordinateur pour le tour 
+            let i = Math.random() * 100;
+            console.log(`valeur de i = ${i}`);
+            if (i <= rock) {
+                return "rock";
+            } else if (i <= paper) {
+                return "paper";
+            } else {
+                return "scissors";
+            }
+        }
+
+        computerChoice();
+    </script>
+</body>
+
+</html>

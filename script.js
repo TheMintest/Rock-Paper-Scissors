@@ -17,7 +17,7 @@ function computerChoice() {
 }
 
 
-const playerWin = "You win  !";
+const playerWin = "You win !";
 const playerLoose = "You loose this time";
 const draw = "Draw"
 let result = "";
@@ -26,6 +26,7 @@ function playRound() {
     // définition du choix de l'utilisateur et de celui de l'ordinateur.
     let playerSelection = prompt("Rock, paper or scissors ?").toLowerCase();
     let computeurSelection = computerChoice();
+    // alert(`player choice is ${playerSelection}, computer choice is ${computeurSelection}`);
     console.log(`player choice is ${playerSelection}, computer choice is ${computeurSelection}`);
 
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
@@ -61,15 +62,11 @@ function game(numberOfRound) {
     let tie = 0;
 
     for (let currentRound = 0; currentRound <= numberOfRound; currentRound++) {
-        if (numberOfRound = NaN) {
-            alert("please enter a valid number");
-        } else {
-            playRound();
-        }
+        result = playRound();
 
-        if (playRound === playerWin) {
+        if (result === playerWin) {
             win = win + 1;
-        } else if (playRound === playerLoose) {
+        } else if (result === playerLoose) {
             loss = loss + 1;
         } else {
             tie = tie + 1;
@@ -88,5 +85,5 @@ function game(numberOfRound) {
 }
 
 
-numberOfRound = prompt("Enter the number of round you want to play.")
+numberOfRound = +prompt("Enter the number of round you want to play.") //le + converti le strig en number
 game(numberOfRound);
